@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+}
+
+.topNav{
+    overflow: hidden;
+    color:white;
+    background-color:rgba(50, 50, 50);
+    font-family: Gill Sans, sans-serif;
+}
+
+.topNav a{
+  float:left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topNav a.active
+{
+    background-color: blueviolet;
+    color: black;
+}
+
+.topNav a.dfs:hover
+{
+    background-color:skyblue;
+    color: white;
+}
+.topNav a.bfs:hover{
+    background-color: brown;
+    color:black;
+}
+.topNav a.nume{
+    float: right;
+}
+
+.header{
+    background-color: black;
+    padding: 10%;
+}
+
+.header h1{
+    color: white;
+    text-align: center;
+    font-family: Gill Sans, sans-serif;
+}
+
+.pa{
+    background-color: skyblue;
+    color: white;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    width: 40%;
+    opacity: 0.6;
+    padding:80px;
+    font-family: Gill Sans, sans-serif;
+}
+.pl{
+    background-color: brown;
+    color: black;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0.6;
+    padding:80px;
+    font-family: Gill Sans, sans-serif;
+}
+.pa:hover{
+    opacity: 1;
+}
+.pl:hover{
+    opacity: 1;
+}
+
+.main{
+    background-color: blueviolet;
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    margin: auto;
+}
+.main h1{
+    text-align:center;
+    font-size: 60px;
+    font-family: Gill Sans, sans-serif;
+}
+
+.text{
+    background-color: blueviolet;
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    margin:auto;
+    font-size: 30px;
+    font-family: Gill Sans, sans-serif;
+}
+
+

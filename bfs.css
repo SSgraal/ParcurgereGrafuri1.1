@@ -1,0 +1,144 @@
+
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color:white;
+    margin:0;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color:rgba(50, 50, 50);
+    font-family: Gill Sans, sans-serif;
+  }
+  
+  .topnav a{
+    float:left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a.acasa:hover {
+    background-color: blueviolet;
+    color: black;
+  }
+  
+  .topnav a.dfs:hover{
+    background-color:skyblue;
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color:brown;
+    color: black;
+  }
+  .sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .main{
+    margin: auto;
+    width: 65%;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3) inset;
+    padding: 10px;
+    background-color:brown;
+  }
+  
+  .Introduction h1{
+    text-align: center;
+    font-family: Gill Sans, sans-serif;
+  }
+  .Introduction p{
+    font-size: 20px;
+    font-family: Gill Sans, sans-serif;
+  }
+  .Introduction{
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  .Exemplu{
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    font-family: Gill Sans, sans-serif;
+  }
+  h2{
+    font-family: Gill Sans, sans-serif;
+    text-align: center;
+  }
+  
+  .explicatie{
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    font-family: Gill Sans, sans-serif;
+  }
+  .algoritm{
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+  }
+  .observatie{
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: Gill Sans, sans-serif;
+  }
+  .canvas{
+  
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+  #myCanvas{
+      background-color: bisque;
+  }
+  .prety{
+    text-align: center;
+  }
+  .repeatButton{
+    text-align: center;
+    background-color: #ff6347;
+    border-radius: 8px;
+    border:none;
+    padding: 8px;
+    font-size: 18px;
+    font-family: Gill Sans, sans-serif;
+  }
+  .repeatButton:hover{
+    opacity: 0.6;
+  }
+  
+  

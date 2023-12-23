@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invata Grafuri</title>
+    <link href="bfs.css" rel="stylesheet">
+    <script defer src="bfs.js"></script>
+</head>
+<body>
+    <div class="topnav" id="topnav">    
+        <a href="index.html" class="acasa">ACASĂ</a>
+        <a class="dfs" href="dfs.html">PARCURGEREA ÎN ADÂNCIME</a>
+        <a href="bfs.html" class="active">PARCURGEREA ÎN LĂȚIME</a>
+    </div>
+    <div class="main">
+        <div class="Introduction">
+            <h1>Parcurgerea în lățime</h1>
+            <p>Se parcurge vârful de start, apoi vecinii acestuia, apoi vecinii nevizitați ai acestora, etc, până când sunt vizitate toate vârfurile accesibile. Practic, pentru a stabili ordinea de vizitare se folosește o coadă, iar pentru a stabili dacă un vârf a fost sau nu vizitat se foloseşte un vector caracteristic.</p>
+        </div>
+        <div class="Exemplu">
+            <h2 class="example">Exemplu</h2>
+            <p>Dacă avem 5 noduri și muchiile (1,2), (1,3), (2,4),(3,5) atunci parcurgerea în lățime de la nodul 1 este 1 2 3 4 5</p>
+            <div class="canvas">
+                <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;"></canvas>
+            </div>
+            <div class="prety">
+                <button class="repeatButton" id="repeat" type="reset">Arată înca odată</button>
+            </div>
+        </div>
+        <h2>Parcurgerea în lățime se face astfel:</h2>
+        <div class="explicatie">
+            <ul>
+                <li>
+                    adaugăm în coadă vârful inițial și îl vizităm
+                </li>
+                <li>cât timp coada este nevidă
+                    <ul>
+                        <li>extragem un element din coadă</li>
+                        <li>determinăm vecinii nevizitați ai vârfului extras, îi vizităm și îi adăugăm în coadă</li>
+                        <li>eliminăm elementul din coadă</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <h2>Algoritm C++</h2>
+        <div class="algoritm">
+            <p>int bfs(int start)<br>
+                {<br>
+                  int i,k,st,dr;<br>
+                  //initializez coada<br>
+                  st=dr=1;<br>
+                  x[1]=start;<br>
+                  v[start]=1;//vizitez varful initial<br>
+                  while(st<=dr)//cat timp coada nu este vida<br>
+                  {<br>
+                    k=x[st];//preiau un element din coada<br>
+                    for(i=1;i<=n;i++)//parcurg varfurile<br>
+                      if(v[i]==0 && a[k][i]==1)//daca i este vecin cu k si nu este vizitat<br>
+                      {<br>
+                        v[i]=1;//il vizitez<br>
+                        x[++dr]=i;//il adaug in coada<br>
+                      }<br>
+                    st++;//sterg din coada<br>
+                  }<br>
+                  return dr;//returnam numarul de varfuri vizitate<br>
+                }<br>
+            </p>
+        </div>
+        <div class="observatie">
+            <h2>Observație</h2>
+            <p>Dacă graful nu este conex, în urma parcurgerii nu se vor vizita toate vârfurile.</p>
+        </div>
+    </div>
+</body>
+</html>

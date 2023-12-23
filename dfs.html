@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARCURGEREA ÎN ADÂNCIME</title>
+    <link href="dfs.css" rel="stylesheet">
+    <script defer src="dfs.js"></script>
+</head>
+<body>
+    <div class="topnav" id="topnav">    
+        <a href="index.html" class="acasa">ACASĂ</a>
+        <a class="active" href="#parcurgereinadancime">PARCURGEREA ÎN ADÂNCIME</a>
+        <a href="bfs.html" class="bfs">PARCURGEREA ÎN LĂȚIME</a>
+    </div>
+    <div class="main">
+        <div class="Introduction">
+            <h1>Parcurgerea în adâncime</h1>
+            <p>Parcurgerea în adâncime reprezintă explorarea “naturală” a unui graf neorientat. Este foarte asemănătoare cu modul în care un turist vizitează un oraș în care sunt obiective turistice (vârfurile grafului) și căi de acces între obiective (muchiile). Vizitarea orașului va avea loc din aproape în aproape: se pleacă de la un obiectiv de pornire, se continuă cu un obiectiv învecinat cu acesta, apoi unul învecinat cu al doilea, etc.</p>
+        </div>
+        <div class="Exemplu">
+            <h2 class="example">Exemplu</h2>
+            <p>Dacă avem 5 noduri și muchiile (1,2), (1,3), (2,4),(3,5) atunci parcurgerea în adâncime de la nodul 1 este: 1 2 4 3 5</p>
+            <div class="canvas">
+                <canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;"></canvas>
+            </div>
+            <div class="prety">
+                <button class="repeatButton" id="repeat" type="reset">Arată înca odată</button>
+            </div>
+        </div>
+        <h2>Parcurgerea în adâncime se face astfel:</h2>
+        <div class="explicatie">
+            <ol>
+                <li>
+                    Se începe cu un vârf inițial x, care este în acest moment vârf curent.
+                </li>
+                <li>Vârful x se vizitează. Se determină primul său vecin nevizitat y al lui x, care devine vârf curent.
+                </li>
+                <li>Apoi se vizitează primul vecin nevizitat al lui y, şi aşa mai departe, mergând în adâncime, până când ajungem la un vârf care nu mai are vecini nevizitați. Când ajungem într-un astfel de vârf, ne întoarcem la “părintele” acestuia – vârful din care am ajuns în acesta.
+                </li>
+                <li>Dacă acest vârf mai are vecini nevizitați, alegem următorul vecin nevizitat al său și continuam parcurgerea în același mod.
+                </li>
+                <li>Dacă nici acest vârf nu mai are vecini nevizitați, revenim în vârful său părinte și continuăm în același mod, până când toate vârfurile accesibile din vârful de start sunt vizitate.
+                </li>
+            </ol>
+        </div>
+        <h2>Algoritm C++</h2>
+        <div class="algoritm">
+            <p>void dfs(int k)<br>
+                 {<br>
+                     v[k]=1; //vizitam varful curent x<br>
+                     for(int i=1;i<=n;i++) // determinam vecinii nevizitati ai lui x<br>
+                      if(a[k][i]==1 && v[i]==0)<br>
+                     {<br>
+                         dfs(i); // continuam parcurgerea cu vecinul curent i<br>
+                     }<br>
+                 }
+            </p>
+        </div>
+        <div class="observatie">
+            <h2>Observație</h2>
+            <p>Daca graful nu este conex nu se vor vizita toate nodurile.</p>
+        </div>
+    </div>
+</body>
+</html>
